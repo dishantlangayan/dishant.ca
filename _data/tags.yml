@@ -1,0 +1,16 @@
+design-patterns:
+  name: design-patterns
+  description: Enterprise integration design patterns that help you simplify complex scenarios
+  cover: assets/images/speeches.jpg
+event-driven:
+  name: event-driven
+  description: Everything about event-driven architectures.
+  cover: False
+enablement:
+  name: enablement
+  description: My customer & sales enablement experiences.
+  cover: assets/images/fables.jpg
+travel:
+  name: travel
+  description: False
+  cover: False
