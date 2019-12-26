@@ -11,14 +11,13 @@ baseurl: /
 # Website info
 title: Dishant.ca
 description: helping enterprises become event driven so they can innovate and move the world forward
-  #enterprise architect / developer / event driven architectures
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url: https://dishant.ca/
 source_url: https://github.com/dishantlangayan/dishant.ca/
-CNAME: #add cname for website to be created
+CNAME: dishant.ca
 
 # Social info
 navigation: True # show the navbar links
