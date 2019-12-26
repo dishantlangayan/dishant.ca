@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>Enterprise Architect/Developer/Sales Enablement/Training/Travel</description>
+    <description>helping enterprises become event driven so they can innovate and move the world forward</description>
     <link>
     </link>
     
       
       <item>
-        <title>Welcome to Ghost</title>
+        <title>What is Event Driven Architectures?</title>
         
-          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+          <description>&lt;p&gt;As this blog is mainly about Event Driven Architectures (EDA), I thought of starting off with the basics and explaining some fundamentals.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 10:00:00 +0000</pubDate>
+        <pubDate>Sun, 22 Dec 2019 10:00:00 +0000</pubDate>
         <link>
-        /welcome</link>
-        <guid isPermaLink="true">/welcome</guid>
+        /what-is-eda</link>
+        <guid isPermaLink="true">/what-is-eda</guid>
       </item>
       
     
