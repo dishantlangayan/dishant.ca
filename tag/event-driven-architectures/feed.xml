@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="/tag/event-driven-architectures/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-12-26T22:06:45+00:00</updated>
-  <id>/tag/event-driven-architectures/feed.xml</id>
+  <link href="/dishant.ca/tag/event-driven-architectures/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/dishant.ca/" rel="alternate" type="text/html" />
+  <updated>2019-12-26T22:22:19+00:00</updated>
+  <id>/dishant.ca/tag/event-driven-architectures/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">What is Event Driven Architectures?</title>
-      <link href="/what-is-eda" rel="alternate" type="text/html" title="What is Event Driven Architectures?" />
+      <link href="/dishant.ca/what-is-eda" rel="alternate" type="text/html" title="What is Event Driven Architectures?" />
       <published>2019-12-22T10:00:00+00:00</published>
       <updated>2019-12-22T10:00:00+00:00</updated>
-      <id>/what-is-eda</id>
-      <content type="html" xml:base="/what-is-eda">&lt;p&gt;As this blog is mainly about Event Driven Architectures (EDA), I thought of starting off with the basics and explaining some fundamentals.&lt;/p&gt;
+      <id>/dishant.ca/what-is-eda</id>
+      <content type="html" xml:base="/dishant.ca/what-is-eda">&lt;p&gt;As this blog is mainly about Event Driven Architectures (EDA), I thought of starting off with the basics and explaining some fundamentals.&lt;/p&gt;
 
 &lt;p&gt;Everything in the Universe is event driven. The big bang was an event. An inventory update is an event. A traffic light update is an event. Internet of Things (IoT) is inherently event driven. My washing machine notifying me on my phone that my laundry is done is event driven. Life can be perceived as a series of events, which we “subscribe” to by given them attention.&lt;/p&gt;
 
