@@ -1,68 +1,27 @@
-## Jasper2
+## Dishant.ca
 
-[![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
-[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
+[![Build Status](https://travis-ci.org/dishantlangayan/dishant.ca.svg?branch=master)](https://travis-ci.org/dishantlangayan/dishant.ca)
 
-This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
-*v2.1.9* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
-
-## Live Demo
-
-[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://jekyller.github.io/jasper2)
-
-![home page](https://raw.githubusercontent.com/jekyller/jasper2/master/assets/screenshot-desktop.jpg)
-
-
-## Features
-
-* Out of the box support for multiple authors (via `_data/authors.yml`)
-* Full author information including: picture, bio, website, twitter, facebook, etc.
-* Tag description(s) and personalised covers (via `_data/tags.yml`)
-* Related posts view at the bottom of each post
-* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
-* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
-* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
-* Toggleable subscribe button (requires an external service)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
-* Support for Google Analytics tracking
-* Support for Disqus comments (not Ghost standard)
-
+My personal blog hosted using GitHub pages, Jekyll, and Jasper2 theme at: [dishant.ca](https://dishant.ca)
 
 ## Getting Started
+
+### Building and Testing Locally
+
+Ensure you have Jekyll, Bundle installed. Clone the repo and run the following from the repo root directory:
+
+```bash
+$ bundle exec jekyll serve
+```
+
+Open a browser and navigate to: http://127.0.0.1:4000/
 
 ### Deployment
 
 **Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
-deploying with Github Pages. This means:
-
-**1)** that we need to generate your site locally (more details below) and push the resulting
-HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
-then host;
-
-**2)** built the site with [travis-ci](https://travis-ci.org/) (with goodies from
+deploying with Github Pages. For this purpose the site is built with [travis-ci](https://travis-ci.org/) (with goodies from
 [jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
 generated HTML files to a *gh-pages* branch.
-This later approach is the one I am currently using to generate the live demo.
-
-**3)** deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
-
-For option **1)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyller/jasper2/tree/gh-pages)).
-
-For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
 
 ### Author Pages
 
@@ -72,6 +31,8 @@ in the *[\_data/authors.yml](_data/authors.yml)* file.
 With the latest update, multiple author blogs are now supported out of the box.
 
 ### Compiling Styles
+
+This blog uses the Jasper2 theme from Ghost, which is based on Casper styles. 
 
 Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
 
@@ -87,22 +48,17 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 ## Issues and Contributing
 
 This install builds well with Ruby v2.5.1 and Jekyll v3.7.4. If you run into any problems
-please log them on the [issue tracker](https://github.com/jekyller/jasper2/issues).
+please log them on the [issue tracker](https://github.com/dishantlangayan/dishant.ca/issues).
 
 Feel free pull-request your patches and fixes.
 
 ## Thanks
 
-
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
-
+Many thanks to the Ghost team for all the design work. Thanks for Unsplash.com for images used in this blog.
 
 ## Copyright & License
 
-Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
-
-Copyright (C) 2015-2018 - Released under the MIT License.
+Copyright (C) 2019-2020 Dishant Langayan - Released under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
