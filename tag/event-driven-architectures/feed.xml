@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/event-driven-architectures/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-12-26T23:19:54+00:00</updated>
+  <updated>2019-12-29T05:41:11+00:00</updated>
   <id>/tag/event-driven-architectures/feed.xml</id>
 
   
@@ -41,17 +41,61 @@
 
 &lt;p&gt;Everything in the Universe is event driven. The big bang was an event. An inventory update is an event. A traffic light update is an event. Internet of Things (IoT) is inherently event driven. My washing machine notifying me on my phone that my laundry is done is event driven. Life can be perceived as a series of events, which we “subscribe” to by given them attention.&lt;/p&gt;
 
-&lt;p&gt;An architectural pattern that promotes the production, consumption, detection, and reaction to such events in real-time if refered to as an &lt;strong&gt;Event Driven Architecture (EDA)&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;An architectural pattern that promotes the production, consumption, detection, and reaction to such events in real-time is refered to as an &lt;strong&gt;Event Driven Architecture (EDA)&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;EDAs have existed for years, handling high-volumes of events in banking systems, stock trading, travel reservation systems to name a few. It has allowed exterprise systems to easily extend their architectures with new components that are ready to produce new events or consume those that already are in place in the overall system. It decouples systems and allows them to react to events in real-time.&lt;/p&gt;
 
-&lt;p&gt;Embracing EDA is foundational to building next generation of digital business applications. IT teams will need to be able to design, develop, deploy and operate event driven solutions, in cloud native styles. In doing so, EDA will help bring one key business value to enterprises: &lt;strong&gt;Customer Experience&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;benefits-of-eda&quot;&gt;Benefits of EDA&lt;/h2&gt;
+
+&lt;p&gt;Embracing EDA is foundational to building next generation of digital business applications. IT teams will need to be able to design, develop, deploy and operate event driven solutions, in cloud native environments. In doing so, EDA will help bring one of the most important business value to enterprises: &lt;strong&gt;Customer Experience&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/business-value-eda.png&quot; alt=&quot;Business Value of EDA&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Every business strive to deliver better customer experiences to their consumers. Being event driven means more real-time = efficiency. Event driven means breaking down silo’s of data and making this data available to other lines of businesses. Event driven means decoupling of microservices/applications, which provides better agility. All of this lands back to customer experience.&lt;/p&gt;
+&lt;p&gt;Every business strive to deliver better customer experiences to their consumers. To deliver on these experiences, enterprises need to their businesses and IT systems to be event driven, implement EDAs, and reacts to events in real-time. Being event driven means more real-time which = &lt;strong&gt;efficiency&lt;/strong&gt;. Event driven means &lt;strong&gt;liberating your data&lt;/strong&gt;, i.e. breaking down silo’s of data and making this data available to other lines of businesses withing the organization. Event driven also means decoupling of microservices/applications, which provides better &lt;strong&gt;agility&lt;/strong&gt;. All of this lands back to customer experience.&lt;/p&gt;
 
-&lt;p&gt;Cover photo by &lt;a href=&quot;https://unsplash.com/@lanceanderson?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Lance Anderson&lt;/a&gt; on Unsplash.&lt;/p&gt;</content>
+&lt;p&gt;Now that you have an idea of what EDA means let’s explore some other related concepts.&lt;/p&gt;
+
+&lt;h2 id=&quot;events&quot;&gt;Events&lt;/h2&gt;
+
+&lt;p&gt;In the beginning of the article I attempted to explain what events are, but in technical terms, an event is a way of capturing a statement of fact. Other similar definitions on the web explain an event as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Events represent the change of state of something of interest to the business.&lt;/li&gt;
+  &lt;li&gt;Events are records of something that has happened.&lt;/li&gt;
+  &lt;li&gt;Events can’t be changed, that is, they are immutable. (We can’t change something that has happened in the past).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;messaging&quot;&gt;Messaging&lt;/h2&gt;
+
+&lt;p&gt;I previously mentioned EDAs have been around for some time. These architectural patterns were more commonly referred to as Enterprise Integration Patterns (EIP). With EIPs you could build multiple applications independently, with different languages and platforms, that share data with each other in a responsive way. You would use Messaging to transfer packets of data frequently, immediately, reliably, and asynchronously, using customizable formats. Messaging Systems or a.k.a &lt;em&gt;Message Brokers&lt;/em&gt;, would act as the intermediary broker between these decoupled applications. The decoupling allows integrators to choose between broadcasting a message to multiple receivers (a.k.a publish-subscribe), routing a message to one of many receivers, or other topologies like point-to-point and request-reply.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/messaging.gif&quot; alt=&quot;Messaging&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In EDA, we refer to these messaging systems as Event Brokers.&lt;/p&gt;
+
+&lt;p&gt;A sender sends data to a receiver by sending a &lt;em&gt;Message&lt;/em&gt; via a &lt;em&gt;Message Channel&lt;/em&gt; that connects the sender and receiver.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/message-channel-solution.gif&quot; alt=&quot;Messaging Channel&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A channels are logical addresses in the messaging systems. The two most common type so channels used in messaging systems are Topics and Queues. I cover these in more details in subsequent articles, but for now all you need to know is that every message is destined to one address, and other applications subscribe to the destination to receive the message.&lt;/p&gt;
+
+&lt;h2 id=&quot;events-vs-messages&quot;&gt;Events vs. Messages&lt;/h2&gt;
+
+&lt;p&gt;To be added soon.&lt;/p&gt;
+
+&lt;h2 id=&quot;event-brokers&quot;&gt;Event Brokers&lt;/h2&gt;
+
+&lt;p&gt;To be added soon.&lt;/p&gt;
+
+&lt;h2 id=&quot;event-schemas-and-registry&quot;&gt;Event Schemas and Registry&lt;/h2&gt;
+
+&lt;p&gt;To be added soon.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Cover photo by &lt;a href=&quot;https://unsplash.com/@lanceanderson?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Lance Anderson&lt;/a&gt; on Unsplash.
+Messaging photos by &lt;a href=&quot;https://www.eaipatterns.com&quot;&gt;www.eaipatterns.com&lt;/a&gt;&lt;/p&gt;</content>
 
       
       

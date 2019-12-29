@@ -181,17 +181,61 @@ into the {body} of the default.hbs template -->
 
 <p>Everything in the Universe is event driven. The big bang was an event. An inventory update is an event. A traffic light update is an event. Internet of Things (IoT) is inherently event driven. My washing machine notifying me on my phone that my laundry is done is event driven. Life can be perceived as a series of events, which we “subscribe” to by given them attention.</p>
 
-<p>An architectural pattern that promotes the production, consumption, detection, and reaction to such events in real-time if refered to as an <strong>Event Driven Architecture (EDA)</strong>.</p>
+<blockquote>
+  <p>An architectural pattern that promotes the production, consumption, detection, and reaction to such events in real-time is refered to as an <strong>Event Driven Architecture (EDA)</strong>.</p>
+</blockquote>
 
 <p>EDAs have existed for years, handling high-volumes of events in banking systems, stock trading, travel reservation systems to name a few. It has allowed exterprise systems to easily extend their architectures with new components that are ready to produce new events or consume those that already are in place in the overall system. It decouples systems and allows them to react to events in real-time.</p>
 
-<p>Embracing EDA is foundational to building next generation of digital business applications. IT teams will need to be able to design, develop, deploy and operate event driven solutions, in cloud native styles. In doing so, EDA will help bring one key business value to enterprises: <strong>Customer Experience</strong>.</p>
+<h2 id="benefits-of-eda">Benefits of EDA</h2>
+
+<p>Embracing EDA is foundational to building next generation of digital business applications. IT teams will need to be able to design, develop, deploy and operate event driven solutions, in cloud native environments. In doing so, EDA will help bring one of the most important business value to enterprises: <strong>Customer Experience</strong>.</p>
 
 <p><img src="/assets/images/business-value-eda.png" alt="Business Value of EDA" /></p>
 
-<p>Every business strive to deliver better customer experiences to their consumers. Being event driven means more real-time = efficiency. Event driven means breaking down silo’s of data and making this data available to other lines of businesses. Event driven means decoupling of microservices/applications, which provides better agility. All of this lands back to customer experience.</p>
+<p>Every business strive to deliver better customer experiences to their consumers. To deliver on these experiences, enterprises need to their businesses and IT systems to be event driven, implement EDAs, and reacts to events in real-time. Being event driven means more real-time which = <strong>efficiency</strong>. Event driven means <strong>liberating your data</strong>, i.e. breaking down silo’s of data and making this data available to other lines of businesses withing the organization. Event driven also means decoupling of microservices/applications, which provides better <strong>agility</strong>. All of this lands back to customer experience.</p>
 
-<p>Cover photo by <a href="https://unsplash.com/@lanceanderson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lance Anderson</a> on Unsplash.</p>
+<p>Now that you have an idea of what EDA means let’s explore some other related concepts.</p>
+
+<h2 id="events">Events</h2>
+
+<p>In the beginning of the article I attempted to explain what events are, but in technical terms, an event is a way of capturing a statement of fact. Other similar definitions on the web explain an event as:</p>
+
+<ul>
+  <li>Events represent the change of state of something of interest to the business.</li>
+  <li>Events are records of something that has happened.</li>
+  <li>Events can’t be changed, that is, they are immutable. (We can’t change something that has happened in the past).</li>
+</ul>
+
+<h2 id="messaging">Messaging</h2>
+
+<p>I previously mentioned EDAs have been around for some time. These architectural patterns were more commonly referred to as Enterprise Integration Patterns (EIP). With EIPs you could build multiple applications independently, with different languages and platforms, that share data with each other in a responsive way. You would use Messaging to transfer packets of data frequently, immediately, reliably, and asynchronously, using customizable formats. Messaging Systems or a.k.a <em>Message Brokers</em>, would act as the intermediary broker between these decoupled applications. The decoupling allows integrators to choose between broadcasting a message to multiple receivers (a.k.a publish-subscribe), routing a message to one of many receivers, or other topologies like point-to-point and request-reply.</p>
+
+<p><img src="/assets/images/messaging.gif" alt="Messaging" /></p>
+
+<p>In EDA, we refer to these messaging systems as Event Brokers.</p>
+
+<p>A sender sends data to a receiver by sending a <em>Message</em> via a <em>Message Channel</em> that connects the sender and receiver.</p>
+
+<p><img src="/assets/images/message-channel-solution.gif" alt="Messaging Channel" /></p>
+
+<p>A channels are logical addresses in the messaging systems. The two most common type so channels used in messaging systems are Topics and Queues. I cover these in more details in subsequent articles, but for now all you need to know is that every message is destined to one address, and other applications subscribe to the destination to receive the message.</p>
+
+<h2 id="events-vs-messages">Events vs. Messages</h2>
+
+<p>To be added soon.</p>
+
+<h2 id="event-brokers">Event Brokers</h2>
+
+<p>To be added soon.</p>
+
+<h2 id="event-schemas-and-registry">Event Schemas and Registry</h2>
+
+<p>To be added soon.</p>
+
+<hr />
+<p>Cover photo by <a href="https://unsplash.com/@lanceanderson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lance Anderson</a> on Unsplash.
+Messaging photos by <a href="https://www.eaipatterns.com">www.eaipatterns.com</a></p>
 
                 </div>
             </section>
