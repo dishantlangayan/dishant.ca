@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://inspiring-entremet-28f962.netlify.app/'
 languageCode = 'en-us'
 title = 'Dishant.ca'
 theme = "puppet"
