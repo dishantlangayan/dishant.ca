@@ -17,7 +17,7 @@ enableEmoji = true
 ignoreErrors = ["error-remote-getjson"]
 
 disqusShortname = ""
-googleAnalytics = ""
+googleAnalytics = "UA-30333711-1"
 
 [outputs]
 home = ["HTML", "JSON", "RSS"]
@@ -64,13 +64,13 @@ weight = 50
 [[menu.main]]
 identifier = "github"
 name = "Github"
-url = "https://github.com/roninro/hugo-theme-puppet/"
+url = "https://github.com/dishantlangayan/"
 weight = 100
 
 
 [params]
 author = "Dishant Langayan"
-description = "Tagline description here."
+description = "The way to get started is to quit talking and begin doing. -Walt Disney"
 keywords = "blog,developer,personal"
 img_home = "img/home-bg.jpg"
 img_404 = "img/404-bg.jpg"
@@ -87,28 +87,26 @@ bio = "a personal website"
 
 [params.social]
 rss_enable = true
-twitter = "johndoe"
-facebook = "johndoe"
-zhihu = "johndoe"
-weibo = "johndoe"
-github = "johndoe"
-linkedin = "johndoe"
+twitter = "dishantlangayan"
+facebook = "dishantlangayan"
+github = "dishantlangayan"
+linkedin = "dishantlangayan"
 
 [[params.friends]]
-name = "John Doe"
-url = "https://gohugo.io"
+name = "Solace"
+url = "https://solace.com"
 
-[[params.friends]]
-name = "John Doe"
-url = "https://gohugo.io"
+# [[params.friends]]
+# name = "John Doe"
+# url = "https://gohugo.io"
 
 # See https://giscus.app/
 [params.giscus]
 enable = true
-repo = "roninro/hugo-theme-puppet"
-repo_id = "R_kgDOHuvyhw"
+repo = "dishantlangayan/dishant.ca"
+repo_id = "R_kgDOIR6sjQ"
 category = "General"
-category_id = "DIC_kwDOHuvyh84CQjDo"
+category_id = "DIC_kwDOIR6sjc4CSIzY"
 input_position = "top"
 theme = "light_tritanopia"
 lang = "en"
