@@ -83,7 +83,7 @@ custom_css = [] # ["css/custom.css"]  Add your file to assets folder  [assets/cs
 [params.sidebar]
 enable = true
 avatar = "img/home-bg.jpg"
-bio = "a personal website"
+bio = "Dishant's personal blog website"
 
 [params.social]
 rss_enable = true
