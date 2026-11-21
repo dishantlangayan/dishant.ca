@@ -1,6 +1,6 @@
 # dishant.ca
 
-Source for [Dishant Langayan's blog](https://dishant-ca.netlify.app/), built with [Hugo](https://gohugo.io) and the [cleanwhite](https://github.com/zhaohuabing/hugo-theme-cleanwhite) theme.
+Source for [Dishant Langayan's blog](https://dishant.ca/), built with [Hugo](https://gohugo.io) and the [cleanwhite](https://github.com/zhaohuabing/hugo-theme-cleanwhite) theme.
 
 ## Prerequisites
 - [Hugo](https://gohugo.io/installation/) (extended, v0.170.1 or newer recommended — see `netlify.toml`)
