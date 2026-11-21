@@ -1,0 +1,62 @@
+baseURL = "https://dishant-ca.netlify.app/"
+title = "Dishant.ca"
+theme = "cleanwhite"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableEmoji = true
+preserveTaxonomyNames = true
+
+[pagination]
+  pagerSize = 5
+
+[services]
+  [services.googleAnalytics]
+    id = "UA-30333711-1"
+
+[params]
+  header_image = "img/home-bg-jeep.jpg"
+  SEOTitle = "Dishant.ca"
+  description = "The way to get started is to quit talking and begin doing. -Walt Disney"
+  keyword = "blog, developer, personal, Dishant Langayan"
+  slogan = "The way to get started is to quit talking and begin doing."
+  upstreamAttribution = true
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "Page not found :("
+
+  # Sidebar
+  sidebar_about_description = "Dishant's personal blog website"
+  sidebar_avatar = "img/home-bg-jeep.jpg"
+  featured_tags = true
+  featured_condition_size = 1
+  friends = true
+  about_me = true
+  last_posts = true
+
+  [params.social]
+    rss = true
+    github = "https://github.com/dishantlangayan"
+    linkedin = "https://www.linkedin.com/in/dishantlangayan/"
+    twitter = "https://twitter.com/dishantlangayan"
+    facebook = "https://facebook.com/dishantlangayan"
+
+  [[params.friend_link]]
+    title = "Solace"
+    href = "https://solace.com"
+
+  [[params.additional_menus]]
+    title = "ARCHIVE"
+    href = "/archive/"
+  [[params.additional_menus]]
+    title = "ABOUT"
+    href = "/about/"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 2
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

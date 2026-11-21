@@ -1,6 +1,6 @@
 ---
-title: Archive
-description: archive archive archive
-header_img: /img/archive-bg.jpg
-short: true
+title: "Posts Archive"
+layout: archive
+type: archive
+description: Archive of all posts.
 ---

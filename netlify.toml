@@ -3,14 +3,11 @@
   command = "hugo"
 
 [build.environment]
-  HUGO_THEME = "puppet"
-  HUGO_VERSION = "0.104.3"
+  HUGO_THEME = "cleanwhite"
+  HUGO_VERSION = "0.170.1"
 
 [context.production.environment]
   HUGO_BASEURL = "https://dishant-ca.netlify.app/"
-
-[context.deploy-preview]
-  command = "hugo -s exampleSite -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"
