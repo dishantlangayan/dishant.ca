@@ -32,3 +32,18 @@
 .series-list h2 { margin: 0 0 6px; }
 .series-list .series-desc { opacity: 0.8; margin: 0 0 8px; }
 .series-list ol { padding-left: 22px; }
+
+/* Post header: darken the cover image so the white title stays readable on
+   light photos. Only applies to posts (layouts/post/page.html), not the home page. */
+header.intro-header.post-header { position: relative; }
+header.intro-header.post-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 15, 25, 0.80), rgba(10, 15, 25, 0.60));
+  pointer-events: none;
+}
+header.intro-header.post-header > .container { position: relative; z-index: 1; }
+header.intro-header.post-header .post-heading h1,
+header.intro-header.post-header .post-heading .subheading,
+header.intro-header.post-header .post-heading .meta { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
