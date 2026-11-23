@@ -1,5 +1,7 @@
 # dishant.ca
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6b2f510-5b3a-4022-ada6-b63deb1c08ef/deploy-status)](https://app.netlify.com/projects/dishant-ca/deploys)
+
 Source for [Dishant Langayan's blog](https://dishant.ca/), built with [Hugo](https://gohugo.io) and the [cleanwhite](https://github.com/zhaohuabing/hugo-theme-cleanwhite) theme.
 
 ## Prerequisites
