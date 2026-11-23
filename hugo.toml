@@ -14,10 +14,6 @@ preserveTaxonomyNames = true
 [pagination]
   pagerSize = 5
 
-[services]
-  [services.googleAnalytics]
-    id = "UA-30333711-1"
-
 [params]
   header_image = "img/home-bg-jeep.jpg"
   SEOTitle = "Dishant.ca"
@@ -26,6 +22,7 @@ preserveTaxonomyNames = true
   slogan = "The way to get started is to quit talking and begin doing."
   upstreamAttribution = true
   custom_css = ["css/site.css"]
+  gtm_id = "GTM-MT9SRTMT"   # Google Tag Manager container
 
   image_404 = "img/404-bg.jpg"
   title_404 = "Page not found :("
