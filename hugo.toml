@@ -6,6 +6,11 @@ defaultContentLanguage = "en"
 enableEmoji = true
 preserveTaxonomyNames = true
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
 [pagination]
   pagerSize = 5
 
@@ -20,6 +25,7 @@ preserveTaxonomyNames = true
   keyword = "blog, developer, personal, Dishant Langayan"
   slogan = "The way to get started is to quit talking and begin doing."
   upstreamAttribution = true
+  custom_css = ["css/site.css"]
 
   image_404 = "img/404-bg.jpg"
   title_404 = "Page not found :("
@@ -27,6 +33,9 @@ preserveTaxonomyNames = true
   # Sidebar
   sidebar_about_description = "Dishant's personal blog website"
   sidebar_avatar = "img/home-bg-jeep.jpg"
+  # Top nav: categories are listed explicitly via additional_menus below
+  omit_categories = true
+
   featured_tags = true
   featured_condition_size = 1
   friends = true
@@ -45,11 +54,23 @@ preserveTaxonomyNames = true
     href = "https://solace.com"
 
   [[params.additional_menus]]
+    title = "EDA & Design Patterns"
+    href = "/categories/eda-design-patterns"
+  [[params.additional_menus]]
+    title = "Agentic AI"
+    href = "/categories/agentic-ai"
+  [[params.additional_menus]]
+    title = "Integration"
+    href = "/categories/integration"
+  [[params.additional_menus]]
+    title = "SERIES"
+    href = "/series"
+  [[params.additional_menus]]
     title = "ARCHIVE"
-    href = "/archive/"
+    href = "/archive"
   [[params.additional_menus]]
     title = "ABOUT"
-    href = "/about/"
+    href = "/about"
 
 [markup]
   [markup.tableOfContents]

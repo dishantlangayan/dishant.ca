@@ -1,0 +1,22 @@
+{{/* "Next in this series" link shown at the end of a series post. */}}
+{{ with .GetTerms "series" }}
+  {{ $term := index . 0 }}
+  {{ $pages := $term.Pages.ByDate }}
+  {{ $cur := $.Page }}
+  {{ $idx := -1 }}
+  {{ range $i, $p := $pages }}{{ if eq $p.RelPermalink $cur.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+  {{ $total := $cur.Params.series_total | default (len $pages) }}
+  <aside class="series-box series-next">
+    {{ if and (ge $idx 0) (lt (add $idx 1) (len $pages)) }}
+      {{ $next := index $pages (add $idx 1) }}
+      <p class="series-label">Next in {{ $term.Title }}</p>
+      <p class="series-name"><a href="{{ $next.RelPermalink }}">Part {{ add $idx 2 }}: {{ $next.Title }} &rarr;</a></p>
+    {{ else if lt (add $idx 1) $total }}
+      <p class="series-label">Next in {{ $term.Title }}</p>
+      <p class="series-name">Part {{ add $idx 2 }} is coming soon. <a href="/index.xml">Follow via RSS</a>.</p>
+    {{ else }}
+      <p class="series-label">That's a wrap</p>
+      <p class="series-name">This is the last part of <a href="{{ $term.RelPermalink }}">{{ $term.Title }}</a>.</p>
+    {{ end }}
+  </aside>
+{{ end }}

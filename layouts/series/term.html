@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{/* /series/<name>/ : one series, parts in reading order. */}}
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+        {{ .Content }}
+        <ol class="series-parts">
+          {{ range .Pages.ByDate }}
+          <li>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
+          </li>
+          {{ end }}
+        </ol>
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}

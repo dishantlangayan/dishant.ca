@@ -13,10 +13,16 @@ Personal blog (dishant.ca) built with [Hugo](https://gohugo.io) and the [cleanwh
 - `content/post/` — blog posts. The theme only lists pages whose type/section is `post`, so posts must live here (not `posts/`).
 - `content/about/`, `content/archive/` (uses `layout: archive`), `content/search/` — standalone pages.
 - `static/` — files copied verbatim to the site root (favicons, `img/` header images).
+- `layouts/post/page.html` — template for posts (copy of the theme's `post.html`, which Hugo 0.146+ no longer applies to posts by itself) plus series navigation.
+- `layouts/_partials/series-nav.html`, `series-next.html` — "Part X of Y" box at the top of series posts and "Next in series" at the bottom.
+- `layouts/series/` — `/series/` index and per-series pages. `static/css/site.css` — site styles (loaded via `params.custom_css`).
+- `content/categories/<slug>/_index.md`, `content/series/<slug>/_index.md` — titles and descriptions for category and series pages.
 - `themes/cleanwhite/` — git submodule; do not edit. Override by placing files with the same path under a top-level `layouts/` or `static/`.
 - `netlify.toml` — build config; `HUGO_VERSION` must match a Hugo version that supports the theme.
 
 ## Conventions
 - Front matter is YAML (`---`); fields: title, subtitle, description, date, author, image, tags, categories, draft.
+- Categories (one per post) use the slug, not the display name: `eda-design-patterns`, `agentic-ai`, `integration`. Display names come from `content/categories/<slug>/_index.md`. The top nav lists these explicitly via `params.additional_menus` (`omit_categories = true`).
+- Multi-part posts set `series: ["Series Name"]` and optionally `series_total: N`. Parts are ordered by `date`, so date them in reading order. Add `content/series/<urlized-name>/_index.md` with a title and description for each new series.
 - New posts are `draft: true` until ready; drafts are excluded from production builds.
 - Post filenames: `YYYY-MM-DD-slug.md`.

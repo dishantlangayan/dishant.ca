@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{/* /series/ : every series with its parts in reading order. */}}
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+        {{ .Content }}
+        {{ with .Pages }}
+        <ul class="series-list">
+          {{ range .ByTitle }}
+          <li>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Description }}<p class="series-desc">{{ . }}</p>{{ end }}
+            {{ with .Pages }}
+            <ol>
+              {{ range .ByDate }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+            </ol>
+            {{ else }}
+            <p class="series-desc"><em>First part coming soon.</em></p>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ else }}
+        <p>No series published yet. The first one is on its way.</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}

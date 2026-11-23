@@ -1,0 +1,24 @@
+{{/* Series box shown at the top of a post that belongs to a series.
+     Parts are ordered by date. Set `series_total` in front matter to show
+     the planned number of parts before they are all published. */}}
+{{ with .GetTerms "series" }}
+  {{ $term := index . 0 }}
+  {{ $pages := $term.Pages.ByDate }}
+  {{ $cur := $.Page }}
+  {{ $idx := 0 }}
+  {{ range $i, $p := $pages }}{{ if eq $p.RelPermalink $cur.RelPermalink }}{{ $idx = add $i 1 }}{{ end }}{{ end }}
+  {{ $total := $cur.Params.series_total | default (len $pages) }}
+  <aside class="series-box" aria-label="Series navigation">
+    <p class="series-label">Series · Part {{ $idx }} of {{ $total }}</p>
+    <p class="series-name"><a href="{{ $term.RelPermalink }}">{{ $term.Title }}</a></p>
+    <details>
+      <summary>All parts</summary>
+      <ol>
+        {{ range $pages }}
+          <li>{{ if eq .RelPermalink $cur.RelPermalink }}<strong>{{ .Title }}</strong> <span class="series-here">(you are here)</span>{{ else }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</li>
+        {{ end }}
+        {{ range seq (add (len $pages) 1) $total }}<li class="series-soon">Coming soon</li>{{ end }}
+      </ol>
+    </details>
+  </aside>
+{{ end }}
