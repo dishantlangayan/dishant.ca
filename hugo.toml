@@ -15,7 +15,20 @@ preserveTaxonomyNames = true
   pagerSize = 5
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  header_image = "img/home-bg-london-1920.jpg"   # also used as og:image / twitter:image
+  # Optimized variants of the header image, served by layouts/_partials/head.html
+  # (WebP where supported, 960px versions on small screens).
+  header_image_webp = "img/home-bg-london-1920.webp"
+  header_image_small = "img/home-bg-london-960.jpg"
+  header_image_small_webp = "img/home-bg-london-960.webp"
+  header_image_position = "center 45%"
+  # Alternate header photo (Sydney Harbour Bridge): swap the five lines above for these
+  # and change sidebar_avatar to "img/sidebar-sydney.jpg".
+  # header_image = "img/home-bg-sydney-1920.jpg"
+  # header_image_webp = "img/home-bg-sydney-1920.webp"
+  # header_image_small = "img/home-bg-sydney-960.jpg"
+  # header_image_small_webp = "img/home-bg-sydney-960.webp"
+  # header_image_position = "center 30%"
   SEOTitle = "Dishant.ca"
   description = "The way to get started is to quit talking and begin doing. -Walt Disney"
   keyword = "blog, developer, personal, Dishant Langayan"
@@ -29,7 +42,7 @@ preserveTaxonomyNames = true
 
   # Sidebar
   sidebar_about_description = "Dishant's personal blog website"
-  sidebar_avatar = "img/home-bg-jeep.jpg"
+  sidebar_avatar = "img/sidebar-london.jpg"   # 480px-wide copy of the header photo
   # Top nav: categories are listed explicitly via additional_menus below
   omit_categories = true
 

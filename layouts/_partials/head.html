@@ -78,6 +78,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+
+    {{/* Responsive header image. The theme sets the header background with an inline
+         style using params.header_image (a JPEG); here pages that use that default
+         image (no front matter `image`, not the 404) get a WebP version and a smaller
+         one on narrow screens, plus a preload hint so it starts downloading early. */}}
+    {{ with .Site.Params.header_image_webp }}{{ if and (not $.Params.image) (ne $.Kind "404") }}
+    {{ $jpg := $.Site.Params.header_image | relURL }}
+    {{ $webp := . | relURL }}
+    {{ $sjpg := ($.Site.Params.header_image_small | default $.Site.Params.header_image) | relURL }}
+    {{ $swebp := ($.Site.Params.header_image_small_webp | default .) | relURL }}
+    <link rel="preload" as="image" type="image/webp" href="{{ $swebp }}" media="(max-width: 768px)">
+    <link rel="preload" as="image" type="image/webp" href="{{ $webp }}" media="(min-width: 769px)">
+    <style>
+      header.intro-header {
+        background-image: url('{{ $jpg }}') !important;
+        background-image: image-set(url('{{ $webp }}') type('image/webp'), url('{{ $jpg }}') type('image/jpeg')) !important;
+        {{ with $.Site.Params.header_image_position }}background-position: {{ . | safeCSS }};{{ end }}
+      }
+      @media (max-width: 768px) {
+        header.intro-header {
+          background-image: url('{{ $sjpg }}') !important;
+          background-image: image-set(url('{{ $swebp }}') type('image/webp'), url('{{ $sjpg }}') type('image/jpeg')) !important;
+        }
+      }
+    </style>
+    {{ end }}{{ end }}
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
     <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
