@@ -112,7 +112,8 @@
 
     <!--  Custom CSS  -->
     {{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{/* ?v=<content hash> so browsers fetch the new file whenever it changes */}}
+    <link rel="stylesheet" href="{{ . | absURL }}?v={{ substr (readFile (printf "static/%s" .) | md5) 0 8 }}">
     {{- end }}
 
     <!-- jQuery -->
