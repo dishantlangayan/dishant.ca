@@ -82,6 +82,17 @@ preserveTaxonomyNames = true
     title = "ABOUT"
     href = "/about"
 
+  [params.giscus]
+    data_repo = "dishantlangayan/dishant.ca"
+    data_repo_id = "R_kgDOIR6sjQ"
+    data_category = "Comments"
+    data_category_id = "DIC_kwDOIR6sjc4DLzkI"
+    data_mapping = "pathname"
+    data_reactions_enabled = "1"
+    data_emit_metadata = "0"
+    data_lang = "en"
+    crossorigin = "anonymous"
+
 [markup]
   [markup.tableOfContents]
     startLevel = 1

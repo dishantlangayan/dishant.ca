@@ -4,6 +4,7 @@ description = "Life is what happens when you're busy making other plans. -John L
 date = "2022-10-22"
 aliases = ["about-us", "about-dishant", "contact"]
 author = "Dishant Langayan"
+comments = false
 +++
 
 Hello there! I'm Dishant Langayan, based in Ottawa, Canada, and this is my personal blog where I like to share my thoughts and opinions on anything technology related.
