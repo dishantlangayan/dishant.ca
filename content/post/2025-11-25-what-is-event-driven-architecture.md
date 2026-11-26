@@ -7,7 +7,7 @@ author: "Dishant Langayan"
 image: "/img/posts/what-is-event-driven-architecture/header.svg"
 tags: ["event-driven-architecture", "eda", "messaging", "design-patterns", "integration", "learning-resources"]
 categories: ["eda-design-patterns"]
-draft: true
+draft: false
 ---
 
 > **TL;DR**
